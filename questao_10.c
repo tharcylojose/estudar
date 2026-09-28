@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int total, horas, minutos, segundos;
+
+    printf("Digite a quantidade de segundos: ");
+    scanf("%d", &total);
+
+    if (total < 0) {
+        printf("Valor invalido! Informe um numero nao negativo.\n");
+        return 1;
+    }
+
+    horas    = total / 3600;
+    minutos  = (total % 3600) / 60;
+    segundos = total % 60;
+
+    printf("%d segundos = %d hora(s), %d minuto(s) e %d segundo(s)\n",
+           total, horas, minutos, segundos);
+
+    return 0;
+}
